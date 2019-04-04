@@ -1,15 +1,10 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Test Page: Don't Panic</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="/css/new.css">
-    <link rel="stylesheet" href="/css/main.css">
-    <style>
+  {% include head.html %}
 
-    </style>
-  </head>
   <body>
+    {% include header.html content="This is my sample note." %}
+    <!-- {% include header.html %} -->
     <div class="full-hero hero-home">
       <h1>I'm an h1</h1>
       <ul class="social-list">
