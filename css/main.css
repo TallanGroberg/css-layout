@@ -47,56 +47,82 @@ a img {
 /* END RESET*/
 
 /* GLOBAL STYLES */
+html {
+  box-shadow: 0 0 0 17px #000 inset;
+  padding: 0 15px;
+}
+
+
 .header {
-  background-color: #aaa;
-  height: 300px;
-  position: relative;
+  background-color: #000;
+  color: #fff;
+  position: fixed;
   width: 100%;
+  z-index: 20;
+}
+.header-logo {
+  background-color: #000;
+  box-sizing: border-box;
+  /* display: block; */
+  height: 10vh;
+  left: -10px;
+
+  padding-top: 10px;
+  position: relative;
+  text-align: center;
+  width: 10vh;
+
+}
+.header-logo:hover,
+.header-logo:active {
+  background-color: #ed6e2f;
+}
+.header-logo img {
+  width: 4.3vh;
 }
 .header-nav {
+
   float: right;
   padding: 5.5vh 60px 0 0;
+
 }
 .header-nav > li {
   display: inline-block;
   margin-left: 1em;
+
+}
+.header-nav > li ~ li {
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  padding-left: 1em;
+
 }
 .header-nav a {
-  color: #000;
+  color: #fff;
   font-size: 0.8rem;
   font-weight: bold;
   text-decoration: none;
   text-transform: uppercase;
+  padding-top: 2px;
 }
 .header-nav a:hover,
 .header-nav a:active {
   color: #ed6e2f;
 }
-.header-logo {
-  background-color: #000;
-  height: 110px;
-  position: absolute;
-  width: 110px;
-}
-.header-logo:hover,
-.header-logo:active {
-  
-  background-color: rgb(184, 130, 20);
+.header-nav > li:first-child a {
+  color: #ed6e2f;
 }
 .header-nav > li:first-child a:hover {
   color: #fff;
 }
-.header-logo {
-  bottom: 50px;
-  position: absolute;
-}
-.header-nav > li ~ li {
-  border-left: 1px solid rgba(0, 0, 0, 0.3);
-  padding-left: 1em;
-}
 h1 {
   font-size: 7vw;
   margin-top: 0;
+  text-align: center;
+
+}
+h2 {
+
+  text-align: center;
 }
 h2 ~ p {
   font-size: 0.8em;
@@ -112,7 +138,8 @@ a {
 /* HERO STYLES */
 .full-hero {
   background-color: #c7dbfc;
-  height: 50vh;
+  height: 30vh;
+  padding-top: 15%;
 }
 
 /* SOCIAL STYLES */
@@ -133,13 +160,14 @@ a {
   vertical-align: middle;
   width: 2.5em;
 
+
 }
 social-link a:hover,
 social-link a:active {
-  background-color: rgba(35, 195, 16, 0.84)
+  background-color: rgba(35, 195, 16, 0.84);
 }
 .social-list {
-  list-style: none;
+  /* list-style: none; */
   padding: 0;
   text-align: center;
 }
@@ -176,6 +204,7 @@ social-link a:active {
   font-size: 1.5em;
   margin: -40px 0 1em;
   text-align: center;
+  padding-left: 5%;
 }
 .bio-box img {
   width: 100%;
