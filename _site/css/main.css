@@ -20,12 +20,7 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
-body {
-  display: flex;
-  flex-direction: column;
-  font-family: helvetica, arial, sans;
-  min-height: 100vh;
-}
+
 blockquote, q {
   quotes: none;
 }
@@ -55,11 +50,16 @@ html {
   padding: 0 15px;
 }
 
-
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: helvetica, arial, sans;
+}
 .header {
   background-color: #000;
   color: #fff;
-  position: fixed;
+  flex-grow: 1;
   width: 100%;
   z-index: 20;
 }
@@ -67,13 +67,11 @@ html {
   background-color: #000;
   box-sizing: border-box;
   /* display: block; */
-  height: 10vh;
-  left: -10px;
 
-  padding-top: 10px;
-  position: relative;
+
+
   text-align: center;
-  width: 10vh;
+
 
 }
 .header-logo:hover,
@@ -128,12 +126,21 @@ html {
 .nav-links a:active {
   color: #ed6e2f;
 }
+.content-container {
+  flex-grow: 1;
+  padding-top: 10vh;
+  width: 100%;
+  background-color: none;
+}
 h1 {
   font-size: 7vw;
   margin-top: 0;
+  text-decoration: none;
+  text-decoration-color: gray;
   text-align: center;
-
+  text-shadow: 2px 3px 4px black;
 }
+
 h2 {
 
   text-align: center;
@@ -156,6 +163,7 @@ a {
   background-color: #000;
   padding: 10vh 0 15vh;
   text-align: center;
+  flex-grow: 1;
 }
 .footer-logo img {
   width: 50px;
@@ -177,9 +185,47 @@ a {
 }
 /* HERO STYLES */
 .full-hero {
-  background-color: #c7dbfc;
-  height: 30vh;
-  padding-top: 15%;
+  background-color: #c7dbfc
+  background-size: cover;
+ box-sizing: border-box;
+  height: 90vh;
+  /* padding-top: 10%; */
+}
+.full-hero:after {
+  bottom: 2vh;
+  border: 10px solid;
+  border-color: rgb(27, 161, 175) transparent transparent;
+  content: "";
+  height: 0;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, 0);
+  width: 0;
+}
+.hero-home {
+   background-image: url(/images/shark.jpg);
+   background-position: center top;
+}
+.hero-content {
+  color: #fff;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  top: 10%;
+  transform: translate(0, -50%);
+}
+.hero-content h1 {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 7vw;
+  margin-bottom: 0.25em;
+}
+.hero-content .social-link {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #557c83;
+}
+.hero-content .social-link:hover {
+  background-color: #000;
+  color: #fff;
 }
 .footer-social-list {
   display: inline-flex;
