@@ -56,6 +56,7 @@ body {
   min-height: 100vh;
   font-family: helvetica, arial, sans;
 }
+
 .header {
   background-color: #000;
   color: #fff;
@@ -63,14 +64,11 @@ body {
   width: 100%;
   z-index: 20;
 }
-.header-logo {
+/* .header-logo {
   background-color: #000;
-  box-sizing: border-box;
-  /* display: block; */
+  box-sizing: border-box; */
 
-
-
-  text-align: center;
+/* text-align: center; */
 
 
 }
@@ -127,7 +125,7 @@ body {
   color: #ed6e2f;
 }
 .content-container {
-  flex-grow: 1;
+  flex: 1 1 auto;
   padding-top: 10vh;
   width: 100%;
   background-color: none;
@@ -153,10 +151,34 @@ h2 ~ p {
   text-align: center;
 }
 a {
-  color: #f00;
+  color:rgb(70, 170, 213)
+  /* opacity: 0.5; */
+}
+p {
+    line-height: 1.5;
+    margin: 0.75em 0;
+}
+/* HOME STYLES  */
+.home-callout{
+  display: flex;
+  align-items: center;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  padding: 7vh 0;
 }
 
-
+  .callout-title {
+    flex: 1;
+    font-size: 5.75vw;
+    text-align: right;
+    text-transform: uppercase;
+  }
+  .callout-copy {
+  flex: 0 0 45em;
+  padding: 0 3vw;
+  font-size: 0.8rem;
+}
 
 /* FOOTER STYLES */
 .footer {
@@ -188,13 +210,13 @@ a {
   background-color: #c7dbfc
   background-size: cover;
  box-sizing: border-box;
-  height: 90vh;
-  /* padding-top: 10%; */
+  height: 100vh;
+  padding-top: 10%;
 }
 .full-hero:after {
   bottom: 2vh;
   border: 10px solid;
-  border-color: rgb(27, 161, 175) transparent transparent;
+  border-color: rgb(8, 8, 11) transparent transparent;
   content: "";
   height: 0;
   left: 50%;
