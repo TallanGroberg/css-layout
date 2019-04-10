@@ -47,10 +47,17 @@ a img {
 /* END RESET*/
 
 /* GLOBAL STYLES */
-html {
-  box-shadow: 0 0 0 30px #000 inset;
-  padding: 0 30px;
+@media (max-width: 800px) {
+  html {
+    box-shadow: none;
+    padding: 0;
+  }
+  .post-aside {
+    display: none;
+  }
 }
+
+
 body {
   display: flex;
   flex-direction: column;
@@ -63,6 +70,7 @@ body {
   padding-top: 10vh;
   width: 100%;
 }
+
 h1 {
   font-size: 7vw;
   margin-top: 0;
@@ -151,7 +159,43 @@ h4 {
   height: 6em;
   margin-bottom: 1.5em;
 }
-
+.post {
+  width: 100%;
+}
+.post-content,
+.post-footer {
+  margin: auto;
+  max-width: 40em;
+  width: 85vw;
+}
+.pull-left {
+  float: left;
+  margin: 2em 2em 2em -2%;
+}
+.pull-right {
+  float: right;
+  margin: 2em -2% 2em 2em
+}
+.post-aside {
+  background-color: rgba(0, 0, 0, 0.01);
+  float: right;
+  margin: 0 0 2em 2em;
+  padding: 2em;
+}
+.post .post-header {
+  margin-bottom: 2.5em;
+  text-align: center;
+}
+.post-content {
+  font-size: 1.1rem;
+}
+.post-footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  font-style: italic;
+  font-size: 0.8em;
+  margin-top: 3em;
+  padding-top: 2em;
+}
 /* HEADER STYLES */
 .header {
   background-color: #000;
@@ -178,6 +222,11 @@ h4 {
 .header-logo img {
   width: 4.3vh;
 }
+
+
+
+
+
 .header-nav {
   float: right;
   padding: 3.5vh 60px 0 0;
@@ -193,12 +242,17 @@ h4 {
 .header-nav a {
   color: #fff;
 }
+
+
+
+
 .nav-links a {
   font-size: 0.8rem;
   font-weight: bold;
   text-decoration: none;
   text-transform: uppercase;
 }
+
 .nav-links a:hover,
 .nav-links a:active  {
   color: #ed6e2f;
@@ -325,6 +379,17 @@ h4 {
    transform: translate(-50%, 0);
    width: 0;
 }
+@media (max-width: 600px) {
+  .half-hero {
+    display: none;
+  }
+.half-hero {
+  background-position: center center;
+  background-size: cover;
+  height: 40vh;
+
+
+}
 .hero-home {
   background-image: url(/images/shark.jpg);
   background-position: center top;
@@ -388,6 +453,17 @@ h4 {
   margin-bottom: 1.5rem;
   text-align: center;
 }
+.home-section h4 {
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+.home-section .post-header {
+  text-align: center;
+}
+.home-section .blog-posts {
+  margin: auto;
+  width: 75%;
+}
 .home-callout {
   display: flex;
   align-items: center;
@@ -448,4 +524,14 @@ h4 {
 }
 .bio-copy a {
   color: green;
+}
+/* MEDIA QUERIES */
+@media (max-width: 800px) {
+  html {
+    box-shadow: none;
+    padding: 0;
+  }
+  .post-aside {
+    display: none;
+  }
 }
