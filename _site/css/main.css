@@ -244,15 +244,23 @@ h4 {
   border-left: 1px solid rgba(255, 255, 255, 0.3);
   padding-left: 1em;
 }
-/* .header-nav a,
-.drop-trigger {
+.header-nav a {
   color: #fff;
-} */
+}
 
 
 
 
-.nav-links a  {
+.nav-links a
+ {
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.nav-links a,
+.drop-trigger,
+.show-mobile-menu {
   font-size: 0.8rem;
   font-weight: bold;
   text-decoration: none;
@@ -533,51 +541,78 @@ h4 {
 /* MEDIA QUERIES */
 @media (max-width: 800px) {
   /* MOBILE MENU */
-  .mobile-menu-check,
-  .show-mobile-menu {
-    display: none;
-  }
-  .show-mobile-menu {
-    display: block;
-    float: right;
-    font-weight: bold;
-    margin-top: 1.5vh;
-    padding: 1.5em;
-    position: relative;
-    text-transform: uppercase;
-  }
-
-  .header-nav {
-    max-height: 0;
-    overflow: hidden;
-    padding: 0;
-    transition: all 0.5s ease-in-out; */
-   }
-  .mobile-menu-check:checked ~ .header-nav {
-    max-height: 1000px;
-  }
-
   html {
     box-shadow: none;
     padding: 0;
   }
 
+  .mobile-menu-check,
+  .show-mobile-menu {
+    display: none;
+  }
+
+
+
   /* HEADER STYLES */
-  .header-nav {
-    padding: 2vh 1em 0 0;
-  }
-  .header-nav > li {
-    margin-left: 0.25em;
-  }
-  .header-nav > li ~ li {
-    padding-left: 0.25em;
-  }
-  .nav-links a {
-    font-size: 3.25vw;
-  }
-  .header-logo {
-    left: auto;
-  }
+  /* MOBILE MENU */
+     /* .show-mobile-menu {
+      display: block;
+      float: right;
+      margin-top: 1.5vh
+      padding: 1.5em;
+      position: relative;
+    }
+    .header-nav {
+      background-color: #444;
+      box-sizing: border-box;
+      left: 0;
+      max-height: 0;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      text-align: center;
+      top: 10vh;
+      transition: all 0.5s ease-in-out;
+      width: 100vw;
+      z-index: 9;
+    }
+    .header-nav li {
+      display: block;
+      margin-top: 1em;
+    }
+    .header-nav li ~ li {
+      border: 0;
+      padding: 0;
+    }
+    .header-nav li:last-child {
+      margin-bottom: 1em;
+    }
+    .header-nav li:first-child a {
+      color: #fff;
+    }
+    /* HIDE DROPDOWN IN THE NAV MENU */
+    /* .header-nav .dropdown:hover .drop-menu,
+    .header-nav .drop-trigger:after {
+      display: none;
+    }
+    .header-nav .drop-trigger {
+      padding-right: 0;
+    }
+    .mobile-menu-check:checked ~ .header-nav {
+      max-height: 1000px;
+    }
+    .mobile-menu-check:checked ~ .show-mobile-menu:after {
+      background-color: #000;
+      color: #ed6e2f;
+      content: "CLOSE";
+      left: 0;
+      position: absolute;
+      top: 1.5em;
+      width: 100%;
+      text-align: center;
+    }  */
+
+
 
   /* BLOG STYLES */
   .post-aside {
@@ -631,7 +666,7 @@ h4 {
   border-color: #ed6e2f transparent transparent;
 }
 .drop-trigger {
-  /* display: inline-block; */
+  display: inline-block;
   padding-right: 1.5em;
   position: relative;
 }
@@ -654,7 +689,7 @@ h4 {
   right: 0;
   z-index: 9;
 }
-/* .drop-menu:before {
+.drop-menu:before {
   border: 0.6em solid;
   border-color: transparent transparent #fff;
   content: "";
@@ -663,7 +698,7 @@ h4 {
   right: 1em;
   top: -0.1em;
   width: 0;
-} */
+}
 .drop-menu li {
   background-color: #fff;
 }
@@ -694,6 +729,21 @@ h4 {
   background-color: rgba(0,0,0,0.1);
   color: #333;
 }
+.header-nav a,
+drop-trigger {
+  color: #fff;
+}
+
+
+
+
+.nav-links a,
+drop-trigger {
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+}
 /* HIDE IN THE FOOTER */
 .footer .dropdown:hover .drop-menu,
 .footer .drop-trigger:after {
@@ -702,29 +752,21 @@ h4 {
 .footer .drop-trigger {
   padding-right: 0;
 }
-@media (max-width: 800px) {
+
+
+
+
+
   html {
     box-shadow: none;
     padding: 0;
   }
 
-  /* HEADER STYLES */
-  .header-nav {
-    padding: 2vh 1em 0 0;
-  }
-  .header-nav > li {
-    margin-left: 0.25em;
-  }
-  .header-nav > li ~ li {
-    padding-left: 0.25em;
-  }
-  .nav-links a
-  .drop-trigger {
-    font-size: 3.25vw;
-  }
-  .header-logo {
-    left: auto;
-  }
+
+
+
+
+
 
 
   /* HOME STYLES */
@@ -744,9 +786,9 @@ h4 {
   .post-aside {
     display: none;
   }
-  /* .blog-recent {
+  .blog-recent {
    display: none;
- } */
+ }
  .blog-previews {
    padding: 0;
  }
